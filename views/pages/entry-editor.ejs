@@ -1,0 +1,46 @@
+<%-include('../partials/header'); -%>
+<div class="entry-editor-container">
+    <form
+        action="/entry-editor-container"
+        method="POST"
+        class="entry-editor-form form"
+    >
+        <fieldset class="fieldset entry-header">
+            <legend class="text-dark">Entry Header</legend>
+            <input type="text" class="input" placeholder="Title" />
+            <input type="date" name="" id="" />
+        </fieldset>
+        <fieldset class="fieldset entry-content">
+            <legend class="text-dark">Entry Content</legend>
+            <label for="ta" class="text-dark"
+                >This things are on my mind:</label
+            >
+            <textarea
+                class="text-box"
+                name="ta"
+                id="ta"
+                cols="30"
+                rows="10"
+            ></textarea>
+            <label for="ta" class="text-dark">I wish to tackle next:</label>
+            <textarea
+                class="text-box"
+                name="ta"
+                id="ta"
+                cols="30"
+                rows="5"
+            ></textarea>
+            <label for="ta" class="text-dark">I'm grateful for:</label>
+            <textarea
+                class="text-box"
+                name="ta"
+                id="ta"
+                cols="30"
+                rows="5"
+            ></textarea>
+        </fieldset>
+        <button class="btn-save btn">Save</button>
+        <button class="btn" disabled>Undo</button>
+    </form>
+</div>
+<%-include('../partials/footer'); -%>

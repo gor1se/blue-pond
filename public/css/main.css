@@ -1,0 +1,264 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-blue: #94b3fd;
+    --primary-purple: hsl(266, 100%, 76%);
+    --primary-purple-accent: hsl(266, 100%, 56%);
+    --secondary-blue: #94daff;
+    --tertiary-blue: #99feff;
+    --dark-gray: #666;
+    --middle-gray: #aaa;
+    --light-gray: #ddd;
+}
+
+/* Page */
+
+.flash-message {
+    background-color: var(--secondary-blue);
+    color: #000;
+}
+
+.page-container {
+    margin-top: -1.2rem;
+    position: relative;
+    min-height: 100vh;
+}
+
+.page-content {
+    padding-bottom: 7rem;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+
+.navbar {
+    width: 100%;
+    padding: 0 2rem;
+    height: 75px;
+    background-color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list-item {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.nav-list-item a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 1.6rem;
+}
+
+.nav-list-item a:hover {
+    color: white;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-blue);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 7rem;
+}
+
+.footer-copyright {
+    font-size: 20px;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.footer-by {
+    margin: 1rem;
+    color: var(--light-gray);
+}
+
+/* Login Page */
+/* Register Page */
+
+.login-container,
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 650px;
+    width: 100%;
+}
+
+.login-form,
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 40%;
+}
+
+/* Headings */
+
+.text-dark {
+    color: #000;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Buttons */
+
+.btn {
+    background-color: var(--primary-purple);
+    color: #fff;
+    font-size: inherit;
+    padding: 0.5em;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+    margin: 0.25rem;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--primary-purple-accent);
+    outline: none;
+}
+
+.btn:disabled {
+    background-color: var(--middle-gray);
+    cursor: initial;
+}
+
+/* Input */
+
+.input {
+    font-size: inherit;
+    border: none;
+    border-bottom: 1px solid var(--middle-gray);
+    padding: 0.4rem;
+    margin-bottom: 0.6rem;
+    min-width: 250px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+/* Form */
+.form {
+    margin: 1rem;
+}
+
+/* Entry-editor */
+
+.text-box {
+    width: 100%;
+    resize: vertical;
+    font-family: "Mochiy Pop P One", sans-serif;
+}
+
+.fieldset {
+    margin-top: 2rem;
+}
+
+.entry-header {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Vision-editor */
+
+.visionboard-editor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.vision {
+    width: 100%;
+    background-color: var(--primary-blue);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: relative;
+    margin-top: 1.2rem;
+}
+
+.vision-remove {
+    position: absolute;
+    margin: -0.5rem;
+    bottom: 0;
+    right: 0;
+}
+
+.create-vision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.create-vision input {
+    width: 50%;
+}
+
+/* Icons */
+
+.icon {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: var(--primary-purple);
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: var(--primary-purple-accent);
+}
+
+/* Profile */
+
+.profile-content {
+    color: #000;
+    padding: 2rem;
+}
+
+.commit-item {
+    width: 11px;
+    height: 11px;
+    margin: 3px;
+    border-radius: 2px;
+    background-color: var(--primary-purple);
+}
+
+.profile-commits-container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}

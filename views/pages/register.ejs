@@ -1,0 +1,39 @@
+<%- include('../partials/header'); -%>
+
+<div class="register-container">
+    <form action="/register" method="POST" class="register-form form">
+        <h2 class="text-dark">Register</h2>
+        <input
+            type="text"
+            class="input"
+            name="userName"
+            placeholder="Username"
+        />
+        <input
+            type="text"
+            class="input"
+            name="userEmail"
+            placeholder="E-Mail"
+        />
+        <input
+            type="password"
+            class="input"
+            name="userPassword"
+            placeholder="Password"
+        />
+        <input
+            type="password"
+            class="input"
+            name="userPasswordConfirm"
+            placeholder="Confirm password"
+        />
+        <button class="register-btn btn">Register</button>
+        <p class="text-dark text-center">
+            Alredy registered? Click <a href="/login">here</a> to login.
+        </p>
+
+        <div class="flash-message"><%= flashMessage %></div>
+    </form>
+</div>
+
+<%-include('../partials/footer'); -%>

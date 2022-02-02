@@ -1,0 +1,27 @@
+<%-include('../partials/header'); -%>
+<div class="visionboard-editor-container">
+    <form class="addVision">
+        <h2 class="text-dark text-center">My Visions</h2>
+        <div class="create-vision">
+            <input
+                type="text"
+                name=""
+                class="input"
+                id="newVision"
+                placeholder="Create a new Vision"
+            />
+            <img src="./img/add.png" alt="" class="vision-add icon" />
+        </div>
+    </form>
+    <ul class="vision-list">
+        <li class="vision">
+            <p class="vision-text text-dark">Learn Webdevelopment</p>
+            <img src="./img/remove.png" alt="" class="vision-remove icon" />
+        </li>
+        <li class="vision">
+            <p class="vision-text text-dark">Create Diary Project</p>
+            <img src="./img/remove.png" alt="" class="vision-remove icon" />
+        </li>
+    </ul>
+</div>
+<%-include('../partials/footer'); -%>

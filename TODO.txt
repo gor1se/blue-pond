@@ -1,0 +1,102 @@
+Tagebuchapp mit einfachem Login System...
+
+Was bringt mir diese Seite?
+- Einfach im Webbrowser Tagebuch schreiben
+- Ziele tracken und immer wieder vor Augen halten
+- Motivation sich immer wieder zu reflektieren
+- Eigenen Fortschritt beobachten
+- Awards für Leute die sehr viel comitted sind
+
+Welche Elemente gibt es auf der Seite
+- Login Form
+- Register Form
+- Profile Form
+    -> Commitanzeige wie bei GitHub
+    -> Persönliche Infos
+    -> Profilbild
+    -> Visonboard vorerst mit Stichpunkartigen Zielen
+    -> Create Todays Entry
+- Landing Page -> Home bei dem die Features gezeigt werden
+- Entry Page
+
+Welche Daten werden über jeden User gespeicher?
+- Username (String)
+- Email (hashed) (String)
+- Passwort (hashed) (String)
+- Visionboard Ziele (Array of Strings)
+- Entries (Array of Objects)
+    -> Entry
+        -> Heading
+        -> Wofür bin ich Dankbar?
+        -> Was liegt in meinem inneren?
+        -> Datum
+- joinDate (String)
+- Achievements (Array of Strings)
+
+
+Wie möchte ich bei der Programmierung vorgehen?
+- 1. Projekt Setup
+- 2. Frontend Basics (ohne Landing page)
+- 3. Backend
+- 4. Frontend Schliff + Frontend JS (Form validation)
+- 5. Landing Page mit Features und Screenshots
+- 6. Tests und Bugfixes
+- 7. Host Plattform
+
+
+OK: Projekt Setup:
+    - init git ✅
+    - create Repository ✅
+    - npm init ✅
+    - npm i express body-parser mongoose ejs dotenv ✅
+    - create .env ✅
+    - set up public folder + CSS file + Frontend JS Folder ✅
+    - set up ejs (Partials Footer + Header (Navbar)) ✅
+    - set up routing für alle Seiten (login / register / profile / home) ✅
+    - Alle Seiten antworten immer mit einer flashMessage als EJS Objects ✅
+
+OK: Frontend Basics
+    - Choose Basic colors (Blue, light purple, ...) ✅
+    - create Partials header (navbar) ✅
+    - create Partials footer ✅
+    - create Login Form (center-Flexbox) ✅
+    - create Registration Form (center-Flexbox) ✅
+    - create Entry Editor (Heading, Grateful, Text, Date, Buttons (Edit, Delete, Save, Undo)) ✅
+    - Edit Visionboard Page (Add Point, Delete Point, Edit Point) ✅
+    - create Profile Page ✅
+        - About Me (Profilepicture, Username, Join Date) ✅
+        - My Commit history (GitHub clone - Kacheln grau blau) ✅
+        - Visionboard ✅
+        - Achievements (empty - but create Section) ✅
+
+3. Backend
+    - Register new User and Save to Database ✅
+    - Login user and redirect to Profile
+    - Profile should show Real User Data
+    - Create Edit Visionboard Point (And save to Database)
+    - Create New Entry (And save to Database) - Entry under /userName/EntryID
+    - Kachelsysstem onclick redirects to Entry
+    - Create Logout Button
+
+4. Frontend Schliff + Frontend JS + Backend Form Validation
+    - responsive CSS
+    - add Form validation
+    - overall Design overhaul if neccessary
+    - Validate Data in Backend
+
+5. Landing Page (Only Frontend)
+    - Create Landing Page
+    - Make and embed Screenshots from Application
+    - Buttons which lead to Register
+
+6. About Us Page
+    - Explain your Mission and your Project
+    - Who is it for?
+    - Why was it created?
+    - What is coming next?
+    - Datasecurity?
+
+7. Tests and Bugfixes
+
+8. Deploy Application
+
