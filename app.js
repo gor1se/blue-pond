@@ -12,6 +12,7 @@ mongoose.connect(process.env.MONGODB);
 const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.set("views", "./views");
 app.set("view engine", "ejs");
 
 const port = process.env.PORT || 3001;
@@ -42,10 +43,7 @@ app.post("/login", (req, res) => {
             // TODO: Render the Profile of the User
             user = foundName[0];
             flashMessage = "Successfull login!";
-            res.render(`pages/profile/${user.name}`, {
-                user: user,
-                flashMessage: flashMessage,
-            });
+            res.redirect(`/profile/${user.name}`);
         }
     });
 });
@@ -103,7 +101,16 @@ app.get("/about-us", (req, res) => {
     res.render("pages/about-us", { user: user, flashMessage: flashMessage });
 });
 
-app.get("/profile/", (req, res) => {
+app.get("/profile/:userName", (req, res) => {
+    if (user.name === req.params.userName) {
+        console.log(user.name + ": Profile");
+        res.redirect("/profile");
+    } else {
+        console.log("Your are not logged in!");
+    }
+});
+
+app.get("/profile", (req, res) => {
     res.render("pages/profile", {
         user: user,
         flashMessage: flashMessage,
